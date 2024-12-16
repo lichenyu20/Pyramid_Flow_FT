@@ -3,10 +3,10 @@
 # This script is used for batch extract the text features for video generation training
 # Since the T5 will cost a lot of GPU memory, pre-extract the text features will save the training memory
 
-GPUS=8  # The gpu number
+GPUS=1  # The gpu number
 MODEL_NAME=pyramid_flux     # The model name, `pyramid_flux` or `pyramid_mmdit`
-MODEL_PATH=/PATH/pyramid-flow-miniflux  # The downloaded ckpt dir. IMPORTANT: It should match with model_name, flux or mmdit (sd3)
-ANNO_FILE=annotation/video_text.jsonl   # The video-text annotation file path
+MODEL_PATH=/data/chenyu/pyramid-flow-ckpt  # The downloaded ckpt dir. IMPORTANT: It should match with model_name, flux or mmdit (sd3)
+ANNO_FILE=annotation/5k.jsonl   # The video-text annotation file path
 
 
 torchrun --nproc_per_node $GPUS \

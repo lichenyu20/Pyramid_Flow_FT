@@ -125,7 +125,7 @@ def get_args():
 
     # Dataset Cconfig
     parser.add_argument('--anno_file', default='', type=str, help="The annotation jsonl file")
-    parser.add_argument('--resolution', default='384p', type=str, help="The input resolution", choices=['384p', '768p'])
+    parser.add_argument('--resolution', default='384p', type=str, help="The input resolution", choices=['384p', '768p', '256'])
 
     # Training set config
     parser.add_argument('--dit_pretrained_weight', default='', type=str, help='The pretrained dit checkpoint')  

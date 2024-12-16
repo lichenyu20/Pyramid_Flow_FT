@@ -174,10 +174,12 @@ class LengthGroupedVideoTextDataset(Dataset):
             if self.resolution == '384p':
                 assert latent.shape[-1] == 640 // 8
                 assert latent.shape[-2] == 384 // 8
-            else:
-                assert self.resolution == '768p'
+            elif self.resolution == '768p':
                 assert latent.shape[-1] == 1280 // 8
                 assert latent.shape[-2] == 768 // 8
+            elif self.resolution == '256':
+                assert latent.shape[-1] == 256 // 8
+                assert latent.shape[-2] == 256 // 8
 
             cur_temp = latent.shape[2]
             cur_temp = min(cur_temp, self.max_frames)
@@ -210,7 +212,7 @@ class LengthGroupedVideoTextDataset(Dataset):
 
 class VideoFrameProcessor:
     # load a video and transform
-    def __init__(self, resolution=256, num_frames=24, add_normalize=True, sample_fps=24):
+    def __init__(self, resolution=256, num_frames=24, add_normalize=True, sample_fps=16):
     
         image_size = resolution
 

@@ -1,0 +1,128 @@
+{
+  "os":  "Linux-5.15.0-124-generic-x86_64-with-glibc2.17",
+  "python":  "CPython 3.8.10",
+  "startedAt":  "2024-12-16T20:15:47.127354Z",
+  "args":  [
+    "--num_workers",
+    "8",
+    "--task",
+    "t2v",
+    "--use_fsdp",
+    "--fsdp_shard_strategy",
+    "zero2",
+    "--use_temporal_causal",
+    "--use_temporal_pyramid",
+    "--interp_condition_pos",
+    "--sync_video_input",
+    "--video_sync_group",
+    "4",
+    "--load_text_encoder",
+    "--model_name",
+    "pyramid_flux",
+    "--model_path",
+    "/data/chenyu/pyramid-flow-ckpt",
+    "--model_dtype",
+    "bf16",
+    "--model_variant",
+    "diffusion_transformer_768p",
+    "--schedule_shift",
+    "1.0",
+    "--gradient_accumulation_steps",
+    "2",
+    "--output_dir",
+    "/data/chenyu/pyramid_flow_ft_ckpt",
+    "--batch_size",
+    "32",
+    "--max_frames",
+    "32",
+    "--resolution",
+    "256",
+    "--anno_file",
+    "annotation/5k.jsonl",
+    "--frame_per_unit",
+    "1",
+    "--lr_scheduler",
+    "constant_with_warmup",
+    "--opt",
+    "adamw",
+    "--opt_beta1",
+    "0.9",
+    "--opt_beta2",
+    "0.95",
+    "--seed",
+    "42",
+    "--weight_decay",
+    "1e-4",
+    "--clip_grad",
+    "1.0",
+    "--lr",
+    "5e-5",
+    "--warmup_steps",
+    "1000",
+    "--epochs",
+    "20",
+    "--iters_per_epoch",
+    "2000",
+    "--report_to",
+    "wandb",
+    "--print_freq",
+    "40",
+    "--save_ckpt_freq",
+    "1"
+  ],
+  "program":  "train/train_pyramid_flow.py",
+  "codePath":  "train/train_pyramid_flow.py",
+  "git":  {
+    "remote":  "git@github.com:lichenyu20/Pyramid_Flow_FT.git",
+    "commit":  "3040d717b0ef48f0dfb10d0eb9f3c1d0b55442e0"
+  },
+  "email":  "lichenyuthu@gmail.com",
+  "root":  "/home/chenyu/Pyramid_Flow_FT",
+  "host":  "lambda-hyperplane",
+  "executable":  "/home/chenyu/anaconda3/envs/pyramid/bin/python",
+  "codePathLocal":  "train/train_pyramid_flow.py",
+  "cpu_count":  64,
+  "cpu_count_logical":  128,
+  "gpu":  "NVIDIA A100-SXM4-80GB",
+  "gpu_count":  4,
+  "disk":  {
+    "/":  {
+      "total":  "1888425144320",
+      "used":  "1610721992704"
+    }
+  },
+  "memory":  {
+    "total":  "1082017255424"
+  },
+  "cpu":  {
+    "count":  64,
+    "countLogical":  128
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere"
+    }
+  ],
+  "cudaVersion":  "12.4"
+}

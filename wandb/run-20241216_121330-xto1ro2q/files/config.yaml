@@ -1,0 +1,177 @@
+_wandb:
+    value:
+        cli_version: 0.19.1
+        m: []
+        python_version: 3.8.10
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 55
+                - 63
+                - 71
+                - 83
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 55
+                - 63
+                - 71
+                - 83
+            "3":
+                - 23
+                - 55
+                - 61
+            "4": 3.8.10
+            "5": 0.19.1
+            "6": 4.39.3
+            "8":
+                - 5
+            "12": 0.19.1
+            "13": linux-x86_64
+anno_file:
+    value: annotation/5k.jsonl
+auto_resume:
+    value: true
+batch_size:
+    value: 8
+clip_grad:
+    value: 1
+corrupt_ratio:
+    value: 0.3333333333333333
+device:
+    value: cuda
+dist_backend:
+    value: nccl
+dist_on_itp:
+    value: false
+dist_url:
+    value: env://
+distributed:
+    value: true
+dit_pretrained_weight:
+    value: ""
+ema_decay:
+    value: 0.9999
+ema_update:
+    value: false
+epochs:
+    value: 20
+frame_per_unit:
+    value: 1
+fsdp_shard_strategy:
+    value: zero2
+global_step:
+    value: 0
+gpu:
+    value: 0
+gradient_accumulation_steps:
+    value: 2
+gradient_checkpointing:
+    value: false
+gradient_checkpointing_ratio:
+    value: 0.75
+interp_condition_pos:
+    value: true
+iters_per_epoch:
+    value: 2000
+load_ema_model:
+    value: ""
+load_model_ema_to_cpu:
+    value: false
+load_text_encoder:
+    value: true
+load_vae:
+    value: false
+local_rank:
+    value: -1
+logging_dir:
+    value: log
+lr:
+    value: 5e-05
+lr_scheduler:
+    value: constant_with_warmup
+max_frames:
+    value: 32
+max_train_steps:
+    value: 40000
+min_lr:
+    value: 1e-05
+model_dtype:
+    value: bf16
+model_name:
+    value: pyramid_flux
+model_path:
+    value: /data/chenyu/pyramid-flow-ckpt
+model_variant:
+    value: diffusion_transformer_768p
+not_add_normalize:
+    value: false
+num_workers:
+    value: 8
+opt:
+    value: adamw
+opt_beta1:
+    value: 0.9
+opt_beta2:
+    value: 0.95
+opt_eps:
+    value: 1e-08
+output_dir:
+    value: /data/chenyu/pyramid_flow_ft_ckpt
+pin_mem:
+    value: true
+print_freq:
+    value: 40
+rank:
+    value: 0
+report_to:
+    value: wandb
+resolution:
+    value: "256"
+resume:
+    value: ""
+save_ckpt_freq:
+    value: 1
+schedule_shift:
+    value: 1
+seed:
+    value: 42
+sp_group_size:
+    value: 1
+sp_proc_num:
+    value: 4
+start_epoch:
+    value: 0
+sync_video_input:
+    value: true
+task:
+    value: t2v
+use_flash_attn:
+    value: false
+use_fsdp:
+    value: true
+use_sequence_parallel:
+    value: false
+use_temporal_causal:
+    value: true
+use_temporal_pyramid:
+    value: true
+vae_pretrained_weight:
+    value: ""
+video_sync_group:
+    value: 4
+warmup_epochs:
+    value: 1
+warmup_lr:
+    value: 1e-06
+warmup_steps:
+    value: 1000
+weight_decay:
+    value: 0.0001
+world_size:
+    value: 4
